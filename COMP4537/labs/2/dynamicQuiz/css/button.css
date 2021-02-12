@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body {
+    background-color: whitesmoke;
+}
+
+.container {
+    height: 500px;
+    position: relative;
+    border: 3px solid orange;
+  }
+  
+.vertical-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#admin {
+    background-color: coral;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+}
+
+#user {
+    background-color: cornflowerblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+}
+
+#title{ 
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-large;
+}

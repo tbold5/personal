@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body {
+    background-color: whitesmoke;
+}
+
+.indexCenter {
+    text-align: center;
+}
+#introduction {
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+#profilePicture {
+    border-radius: 50%;
+}
+.courses {
+    font-family: 'Roboto', sans-serif;
+}
+#homeCourse {
+    list-style-position: inside;
+    margin: auto;
+    align-content: center;
+}
+#coursesTable {
+    align-content: flex-start;
+    list-style-position: inside;
+}

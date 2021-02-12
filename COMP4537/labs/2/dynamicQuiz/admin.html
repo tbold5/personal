@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+</head>
+<body>
+
+    <button id='addBtn' onclick="createQuestion()"> Add </button>
+    <button id='saveBtn' onclick="createObject()"> Save Changes</button>
+    <button id='deleteBtn'> Delete </button> <br>
+    <a href="./index.html">
+        <button> Back</button>
+    </a>
+
+    <script>
+        let number = 0;
+        let createQuestion = () => {
+            // First create div element
+            let questionNumber = document.createElement('p');
+            let textArea = document.createElement('div');
+            let answerText = document.createElement('p');
+            
+            let answerContainer = document.createElement('div');
+            let lineBreak = document.createElement('br');
+            let q1 = document.createElement('textarea');
+            let q2 = document.createElement('textarea');
+            let q3 = document.createElement('textarea');
+            let q4 = document.createElement('textarea');
+            let a1 = document.createElement('radio');
+            let a2 = document.createElement('radio');
+            let a3 = document.createElement('radio');
+            let a4 = document.createElement('radio');
+            // Add content of the element
+            number++;
+            questionNumber.innerHTML = "Question " + number.toString();
+            textArea.innerHTML = "<textarea type='text' id='textAreaBox'>";
+            answerText.innerHTML = "Answers:";
+
+            a1.innerHTML = "<input type='radio' id='a1'>";
+            a2.innerHTML = "<input type='radio' id='a2'>";
+            a3.innerHTML = "<input type='radio' id='a3'>";
+            a4.innerHTML = "<input type='radio' id='a4'>";
+
+            a1.id = 'a1';
+            a2.id = 'a2';
+            a3.id = 'a3';
+            a4.id = 'a4';
+
+            // Put it where it supposed to appear
+            document.body.appendChild(questionNumber);
+            document.body.appendChild(textArea);
+            document.body.appendChild(answerText);
+            
+            document.body.appendChild(answerContainer);
+        
+            answerContainer.appendChild(a1);
+            answerContainer.appendChild(q1);
+            
+            answerContainer.appendChild(a2);
+            answerContainer.appendChild(q2);
+           
+            answerContainer.appendChild(a3);
+            answerContainer.appendChild(q3);
+            
+            answerContainer.appendChild(a4);
+            answerContainer.appendChild(q4);
+        }
+        let answer = document.getElementById('a1').value;
+        console.log(answer);
+        let createObject = new Object();
+        createObject.id = number;
+        createObject.correctAnswer = document.getElementById('a1').value;
+    </script>       
+
+</body>
+</html>
